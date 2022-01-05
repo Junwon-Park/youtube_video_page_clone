@@ -18,6 +18,7 @@ a {
 
 li {
   list-style: none;
+  padding-left: 6px;
 }
 
 #header__list {
@@ -39,6 +40,7 @@ li {
 #header__list .logo__title .title {
   font-size: 20px;
   color: var(--subtext-color);
+  font-weight: bold;
 }
 #header__list .search__menu {
   padding-right: 8px;
@@ -65,21 +67,118 @@ li {
 }
 #video__data > ul > li > a {
   padding: 0px 4px 0px 8px;
+  font-size: 12px;
 }
-#video__data > .meta__list {
-  display: flex;
-  align-items: center;
+#video__data > .hashtag__list {
+  padding: 0;
+}
+#video__data > .hashtag__list li > a {
+  color: var(--clicked-color);
+}
+#video__data > .meta__list li > .meta__discription__views {
+  padding: 0;
+}
+#video__data > .meta__list i {
+  position: absolute;
+  right: 10px;
+}
+#video__data > .meta__list .views__upload {
+  font-size: 12px;
+  color: var(--subtext-color);
+}
+#video__data > .meta__list > .avatar {
+  text-align: center;
 }
 #video__data > .btn__list {
   display: flex;
   justify-content: space-around;
 }
+#video__data > .btn__list li {
+  text-align: center;
+  padding-left: 0;
+}
+#video__data > .btn__list li > a {
+  font-size: 25px;
+  color: var(--unclicked-color);
+}
+#video__data > .btn__list li > div {
+  font-size: 13px;
+}
 #video__data > .ch__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 8px 10px 8px;
+}
+#video__data > .ch__list div {
+  display: flex;
+}
+#video__data > .ch__list button {
+  border: 0;
+  background-color: white;
+  color: var(--basic-font-color);
+}
+#video__data > .ch__list > .ch__info a {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+#video__data > .ch__list > .ch__info > .ch__name__subs {
+  padding-left: 0;
+  text-align: center;
+}
+#video__data > .ch__list > .ch__info > .ch__name__subs a {
+  padding: 0;
+}
+
+.avatar {
+  font-size: 10px;
+  padding-top: 10;
+}
+.ch__name {
+  font-size: 15px;
+  color: var(--header-color);
+}
+.ch__subs {
+  font-size: 10px;
+  color: var(--subtext-color);
 }
 
 #upnext__list {
+  padding-left: 8px;
+}
+
+#upnext__list > .text__upnext {
+  color: var(--subtext-color);
+  padding-bottom: 10px;
+}
+.video__item {
   padding-left: 0;
+  display: flex;
+}
+.video__item a {
+  width: 10rem;
+}
+.video__item__meta {
+  padding-left: 0;
+  display: flex;
+  width: 100%;
+}
+.item__ch__name__views {
+  padding-left: 0;
+  padding-left: 0;
+  font-size: 13px;
+  color: var(--subtext-color);
+}
+
+.video__item__meta > ul {
+  display: flex;
+}
+
+.text__upnext {
+  font-size: 15px;
+}
+
+.clicked {
+  color: var(--clicked-color);
 }
