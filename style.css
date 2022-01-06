@@ -10,6 +10,8 @@
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -19,6 +21,11 @@ a {
 li {
   list-style: none;
   padding-left: 6px;
+}
+
+#container {
+  height: 100vh;
+  width: 100%;
 }
 
 #header__list {
@@ -50,9 +57,10 @@ li {
   color: var(--subtext-color);
 }
 
-#video {
+video {
   width: 100vw;
   position: sticky;
+  top: 0;
 }
 
 #video__data {
@@ -77,14 +85,14 @@ li {
 }
 
 #video__data > .meta__list {
-  width: 100vw;
+  width: 100%;
 }
 #video__data > .meta__list li {
   width: 100%;
   padding-left: 0;
 }
 #video__data > .meta__list li > .meta__discription__views {
-  padding: 0px 8px 0px 8px;
+  padding: 0px 8px;
 }
 #video__data > .meta__list li > .meta__discription__views li {
   padding-left: 0px;
@@ -105,8 +113,6 @@ li {
   justify-content: flex-end;
 }
 .video__discription > .video__discription__icon a {
-  position: absolute;
-  right: 10px;
   color: var(--header-color);
 }
 
@@ -231,3 +237,18 @@ li {
 .clicked {
   color: var(--clicked-color);
 }
+/*
+  일단 CSS를 작성할 때, 너무 중구난방으로 나 조차도 뭐가 뭔지 헷갈릴 정도로 난장판인 것 같다.
+  코드를 작성하기 전에 어느 정도 계획을 가지고 정돈해서 중간중간 수정하고 추가하고 삭제하는 횟수를 줄일 필요가 있다.
+  SASS를 사용하면 더 가독성 좋은 CSS를 작성할 수 있다.
+  이후에 PostCSS도 공부하면 좋고 필요하다면 Styled Component도 공부하면 좋다.
+
+  Chrom DevTools에서 Elements 탭으로 화면의 요소의 속성(margin, padding, Empty Space 등)을 확인할 때,
+  보라색에 빗줄이 쳐진 공간이 무엇을 의미하는 지를 몰라서 채널의 Discription 부분의 화살표 모양의 버튼(Discription 폈다 접었다.)을 배치할 때,
+  의도한 대로 배치가 되지 않아 헤메다가 아래 링크에서 그 공간이 해당 "요소가 차지하지 않은 사용 가능한 공간"이라는 것을 알게 되어 다시 속성을 지정하여 해결할 수 있었다.
+  https://stackoverflow.com/questions/67252231/what-is-the-purpose-of-this-purple-dashed-line-area
+
+  이번 프로젝트에서 Discription을 폈다 접었다 하는 아이콘과 영상 리스트의 아이콘을 position: absolute로 지정하여 right: 10px 이런 식으로 
+  오른쪽에 배치했는데, 이렇게 되면 화면을 좁혔을 때 텍스트와 겹쳐지게 된다.
+  이 것을 상위 박스에 flex box를 적용하여 원하는 위치에 배치했더니 겹쳐지는 현상을 해결할 수 있었다.
+*/
