@@ -75,13 +75,41 @@ li {
 #video__data > .hashtag__list li > a {
   color: var(--clicked-color);
 }
+
+#video__data > .meta__list {
+  width: 100vw;
+}
+#video__data > .meta__list li {
+  width: 100%;
+  padding-left: 0;
+}
 #video__data > .meta__list li > .meta__discription__views {
+  padding: 0px 8px 0px 8px;
+}
+#video__data > .meta__list li > .meta__discription__views li {
+  padding-left: 0px;
+}
+.video__discription {
+  display: flex;
+  justify-content: space-between;
   padding: 0;
 }
-#video__data > .meta__list i {
+.video__discription > .video__discription__scr {
+  flex-basis: 80%;
+  flex-shrink: 3;
+}
+.video__discription > .video__discription__icon {
+  flex-basis: 20%;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.video__discription > .video__discription__icon a {
   position: absolute;
   right: 10px;
+  color: var(--header-color);
 }
+
 #video__data > .meta__list .views__upload {
   font-size: 12px;
   color: var(--subtext-color);
@@ -109,34 +137,38 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 10px 8px 10px 8px;
+  margin: 20px 0px;
 }
 #video__data > .ch__list div {
   display: flex;
 }
-#video__data > .ch__list button {
+#video__data > .ch__list a {
   border: 0;
   background-color: white;
   color: var(--basic-font-color);
 }
-#video__data > .ch__list > .ch__info a {
+#video__data > .ch__list > .ch__info > .avatar {
   display: flex;
   align-items: center;
   padding: 8px;
+  border: 5px solid black;
+  border-radius: 50%;
 }
 #video__data > .ch__list > .ch__info > .ch__name__subs {
   padding-left: 0;
   text-align: center;
+  margin-left: 10px;
 }
-#video__data > .ch__list > .ch__info > .ch__name__subs a {
-  padding: 0;
+#video__data > .ch__list > .ch__info > .ch__name__subs {
+  padding: 5px;
 }
 
 .avatar {
   font-size: 10px;
   padding-top: 10;
 }
-.ch__name {
-  font-size: 15px;
+#video__data > .ch__list > .ch__info > .ch__name__subs > .ch__name {
+  font-size: 18px;
   color: var(--header-color);
 }
 .ch__subs {
@@ -156,13 +188,28 @@ li {
   padding-left: 0;
   display: flex;
 }
-.video__item a {
-  width: 10rem;
+.video__item > .item__thumbnail {
+  width: 150px;
 }
-.video__item__meta {
+.video__item__meta,
+.video__item__meta li {
   padding-left: 0;
   display: flex;
+  flex-direction: column;
   width: 100%;
+}
+.video__item__meta > a {
+  align-self: flex-end;
+  right: 0;
+  padding: 3px 10px;
+}
+.video__item__meta > .item__discription > .discription__icon {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+.video__item__meta > .item__discription > .discription__icon i {
+  padding: 0px 10px;
 }
 .item__ch__name__views {
   padding-left: 0;
