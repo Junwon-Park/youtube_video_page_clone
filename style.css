@@ -7,10 +7,7 @@
   --subtext-color: #c0bfc2;
   --logo-color: #d31713;
 }
-/*
-  push why?
-  
-*/
+
 body {
   margin: 0;
   display: flex;
